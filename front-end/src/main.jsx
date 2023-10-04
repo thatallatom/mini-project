@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import About from "./components/About.tsx";
-import Blog from "./components/Blog.tsx";
-import Home from "./components/Home.tsx";
-import Login from "./components/Login.tsx";
-import Register from "./components/Register.tsx";
+import About from "./components/About.jsx";
+import Blog from "./components/Blog.jsx";
+import Home from "./components/Home.jsx";
+import Login from "./components/Login.jsx";
+import Register from "./components/Register.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
