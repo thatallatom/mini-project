@@ -10,10 +10,10 @@ const port = process.env.PORT || 3000;
 
 // Database configuration
 const dbConfig = {
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
+  host: "203.188.54.9",
+  user: "u6411130034",
+  password: "6411130034abc",
+  database: "mini6411130034",
 };
 
 // Create a database connection pool
