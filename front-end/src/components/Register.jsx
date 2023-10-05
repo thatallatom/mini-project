@@ -14,7 +14,7 @@ export default function Register() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios.post("");
+    axios.post("/back-end", inputs);
     console.log(inputs);
   };
 
