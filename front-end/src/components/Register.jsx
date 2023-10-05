@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 
 export default function Register() {
   const [inputs, setInputs] = useState({});
@@ -7,11 +8,13 @@ export default function Register() {
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setInputs((value) => ({....values, [name]: value }));
+    setInputs((values) => ({ ...values, [name]: value }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    axios.post("");
     console.log(inputs);
   };
 
@@ -19,49 +22,41 @@ export default function Register() {
     <div className="header">
       <h2>Register</h2>
 
-      <form onSubmit={handleSubmit} action="register_db.jsx" method="post">
+      <form onSubmit={handleSubmit}>
         <table>
           <tr>
-            <td className="input-group">
+            <td>
               <label>Username</label>
             </td>
             <td>
               <input type="text" name="username" onChange={handleChange} />
             </td>
           </tr>
-          <tr className="input-group">
+          <tr>
             <td>
-              <label htmlFor="email">Email</label>
+              <label>Email</label>
             </td>
             <td>
               <input type="text" name="email" onChange={handleChange} />
             </td>
           </tr>
-          <tr className="input-group">
+          <tr>
             <td>
-              <label htmlFor="password_1">Password</label>
+              <label>Password</label>
             </td>
             <td>
-              <input
-                type="text"
-                name="password_1"
-                onChange={handleChange}
-              />
+              <input type="text" name="password_1" onChange={handleChange} />
             </td>
           </tr>
-          <tr className="input-group">
+          <tr>
             <td>
-              <label htmlFor="password_2">Confirm Password</label>
+              <label>Confirm Password</label>
             </td>
             <td>
-              <input
-                type="text"
-                name="password_2"
-                onChange={handleChange}
-              />
+              <input type="text" name="password_2" onChange={handleChange} />
             </td>
           </tr>
-          <tr className="input-group">
+          <tr>
             <td colSpan="2" align="right">
               <button>Register</button>
             </td>
